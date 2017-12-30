@@ -1,13 +1,13 @@
 # inherit from the proprietary version
--include vendor/Micromax/AQ5001/BoardConfigVendor.mk
+-include vendor/Micromax/E313/BoardConfigVendor.mk
 
-LOCAL_PATH := device/Micromax/AQ5001
+LOCAL_PATH := device/Micromax/E313
 
 # Off NINJA
 #USE_NINJA := false
 
 # Board
-TARGET_BOARD_PLATFORM := mt6582
+TARGET_BOARD_PLATFORM := mt6592
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 ARCH_ARM_HAVE_VFP := true
@@ -28,13 +28,13 @@ DONT_DEXPREOPT_PREBUILTS := true
 TARGET_LDPRELOAD := libxlog.so:libmtk_symbols.so
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := mt6582
+TARGET_BOOTLOADER_BOARD_NAME := mt6592
 
 TARGET_USERIMAGES_USE_EXT4:=true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := AQ5001
+TARGET_OTA_ASSERT_DEVICE := E313
 
 # MTK HARDWARE
 OLD_KERNEL := true
@@ -157,7 +157,7 @@ USE_MINIKIN := true
 # Selinux
 BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 
-# Sepolicy hack for old kernel, mt6582 version is 26.
+# Sepolicy hack for old kernel, mt6592 version is 26.
 POLICYVERS := 26
 
 # Seccomp filter

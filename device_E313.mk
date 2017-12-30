@@ -3,9 +3,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/Micromax/AQ5001/AQ5001-vendor.mk)
+$(call inherit-product-if-exists, vendor/Micromax/E313/E313-vendor.mk)
 
-LOCAL_PATH := device/Micromax/AQ5001
+LOCAL_PATH := device/Micromax/E313
 
 PRODUCT_CHARACTERISTICS := default
 
@@ -28,11 +28,11 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.mt6582
+    lights.mt6592
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.primary.mt6582 \
+    audio.primary.mt6592 \
     audio_policy.default \
     audio.a2dp.default \
     audio.usb.default \
@@ -59,12 +59,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
     $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/rootdir/fstab.mt6582:root/fstab.mt6582 \
+    $(LOCAL_PATH)/rootdir/fstab.mt6592:root/fstab.mt6592 \
     $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
-    $(LOCAL_PATH)/rootdir/init.mt6582.rc:root/init.mt6582.rc \
-    $(LOCAL_PATH)/rootdir/init.mt6582.usb.rc:root/init.mt6582.usb.rc \
-    $(LOCAL_PATH)/rootdir/init.recovery.mt6582.rc:/init.recovery.mt6582.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.mt6582.rc:root/ueventd.mt6582.rc \
+    $(LOCAL_PATH)/rootdir/init.mt6592.rc:root/init.mt6592.rc \
+    $(LOCAL_PATH)/rootdir/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.recovery.mt6592.rc:/init.recovery.mt6592.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.mt6592.rc:root/ueventd.mt6592.rc \
     $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_KERNEL):kernel
 
@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
 
 PRODUCT_PACKAGES += \
-    gps.mt6582
+    gps.mt6592
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
@@ -143,7 +143,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	ro.mediatek.version.release=ALPS.L1.MP6.V2_ESKY6580.WE.L_P1 \
-	ro.mediatek.platform=MT6582 \
+	ro.mediatek.platform=mt6592 \
 	ro.mediatek.chip_ver=S01 \
 	ro.mediatek.version.branch=L0.MP2 \
 	ro.mediatek.version.sdk=4 \
@@ -162,8 +162,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp,adb
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.media.use-awesome=true
 
-PRODUCT_NAME := full_AQ5001
-PRODUCT_DEVICE := AQ5001
+PRODUCT_NAME := full_E313
+PRODUCT_DEVICE := E313
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280

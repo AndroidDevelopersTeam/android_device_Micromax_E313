@@ -1,11 +1,11 @@
 # platform specific configuration items
-import /init.mt6582.usb.rc
+import /init.mt6592.usb.rc
 import /init.modem.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
     write /sys/class/leds/lcd-backlight/trigger "backlight"
-    setprop ro.mtk.hardware mt6582
+    setprop ro.mtk.hardware mt6592
 
 on init
     # See storage config details at http://source.android.com/tech/storage/
@@ -36,7 +36,7 @@ on init
 
 on fs
     write /proc/bootprof "INIT:eMMC:Mount_All_START"
-    mount_all /fstab.mt6582
+    mount_all /fstab.mt6592
     write /proc/bootprof "INIT:eMMC:Mount_All_END"
 
 service agpsd /system/bin/mtk_agpsd

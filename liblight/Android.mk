@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),mt6582)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),mt6592)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -19,7 +19,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := lights.c
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_SHARED_LIBRARIES := liblog
-LOCAL_MODULE := lights.mt6582
+LOCAL_MODULE := lights.mt6592
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
